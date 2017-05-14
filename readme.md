@@ -5,6 +5,8 @@ myApp jest to prosta aplikacja typu CMS, przeznaczona do zarządzania stroną ty
 * System Logowania / Rejestracji
 * ACL - Użytkownicy podzieleni na role (Administrator i Moderator)
 * Zarządzanie użytkownikami ( Dodaj, usuń, zmień, itp. )
+* Logi użytkowników
+* Generowanie logów w raportach PDF
 * Dodawanie wpisów na strone
 * "Miękkie" usuwanie wpisów
 * Tworzenie kategorii dla wpisów
