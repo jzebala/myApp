@@ -42,6 +42,13 @@ class Post extends Model
     }
 
     /**
+     * Post has many comments
+     */
+    public function comments(){
+        return $this->hasMany('App\Comments')->withTrashed();
+    }
+
+    /**
      * Check that the post has a category
      */
     public function hasCategory($category){

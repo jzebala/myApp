@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?61050786');
-  src: url('../font/fontello.eot?61050786#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?61050786') format('woff2'),
-       url('../font/fontello.woff?61050786') format('woff'),
-       url('../font/fontello.ttf?61050786') format('truetype'),
-       url('../font/fontello.svg?61050786#fontello') format('svg');
+  src: url('../font/fontello.eot?35075686');
+  src: url('../font/fontello.eot?35075686#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?35075686') format('woff2'),
+       url('../font/fontello.woff?35075686') format('woff'),
+       url('../font/fontello.ttf?35075686') format('truetype'),
+       url('../font/fontello.svg?35075686#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?61050786#fontello') format('svg');
+    src: url('../font/fontello.svg?35075686#fontello') format('svg');
   }
 }
 */
@@ -55,12 +55,14 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-user:before { content: '\e800'; } /* '' */
-.icon-calendar:before { content: '\e801'; } /* '' */
-.icon-mail:before { content: '\e802'; } /* '' */
-.icon-search:before { content: '\e803'; } /* '' */
-.icon-tags:before { content: '\e804'; } /* '' */
-.icon-login:before { content: '\e805'; } /* '' */
-.icon-logout:before { content: '\e806'; } /* '' */
+.icon-tags:before { content: '\e800'; } /* '' */
+.icon-login:before { content: '\e801'; } /* '' */
+.icon-user:before { content: '\e802'; } /* '' */
+.icon-calendar:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
+.icon-logout:before { content: '\e805'; } /* '' */
+.icon-search:before { content: '\e806'; } /* '' */
 .icon-home:before { content: '\e807'; } /* '' */
+.icon-comment-alt:before { content: '\e808'; } /* '' */
+.icon-clock:before { content: '\e809'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */

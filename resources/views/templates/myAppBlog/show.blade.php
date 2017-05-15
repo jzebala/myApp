@@ -22,7 +22,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 col-md-6">
-                    <span class="icon-user"> {{ $post->user->name }}</span>
+                    <span class="icon-user"> {{ $post->user->name }} </span>
                 </div>
                 <div class="col-xs-12 col-md-6 text-right">
                     <span class="icon-calendar"> {{ $post->created_at }}</span>
@@ -41,5 +41,8 @@
             </span>
         </div>
     </div>
+
+    @include('templates.myappblog.comments')
+
 </div>
 @endsection

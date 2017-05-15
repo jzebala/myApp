@@ -70,6 +70,19 @@ Route::group(['middleware' => 'roles', 'roles' => 'Moderator'], function(){
 
 });
 
+/* ---- Uzytkownik ---- */
+Route::group(['middleware' => 'roles', 'roles' => 'Uzytkownik'], function(){
+
+    /* -- Users -- */
+    // INDEX
+    Route::get('/profile', ['as' => 'blog.user', 'uses' => 'BlogController@profile']);
+    // UPDATE AVATAR
+    Route::post('/profile', ['as' => 'blog.updateAvatar', 'uses' => 'BlogController@updateAvatar']);
+    // UPDATE PASSWORD
+    Route::put('/profile', ['as' => 'blog.updatePassword', 'uses' => 'BlogController@updatePassword']);
+
+});
+
 /* ---- Admin & Moderator ---- */
 Route::group(['middleware' => 'roles', 'roles' => ['Admin', 'Moderator']], function(){
 
@@ -124,6 +137,15 @@ Route::group(['middleware' => 'roles', 'roles' => ['Admin', 'Moderator']], funct
     Route::post('/calendar', ['as' => 'calendar.store', 'uses' => 'CalendarController@store']);
     // DELETE
     Route::delete('/calendar/{event}', ['as' => 'calendar.destroy', 'uses' => 'CalendarController@destroy']);
+});
+
+/* ---- Admin & Moderator & Uzytkownik ---- */
+Route::group(['middleware' => 'roles', 'roles' => ['Admin', 'Moderator', 'Uzytkownik']], function(){
+    /* -- Comments -- */
+    // STORE
+    Route::post('/wpis/{blog}/', ['as' => 'comments.store', 'uses' => 'CommentsController@store']);
+    // DELETE
+    Route::delete('/wpis/{blog}/', ['as' => 'comments.destroy', 'uses' => 'CommentsController@destroy']);
 });
 
 Auth::routes();

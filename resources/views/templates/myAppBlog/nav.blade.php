@@ -26,7 +26,11 @@
 						<strong>{{ Auth::user()->name }}</strong> <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
+                        @if(Auth::user()->hasRole('Uzytkownik'))
+                        <li><a href="{{ route('blog.user') }}"><span class="icon-home">Profil</span></a></li>
+                        @else
                         <li><a href="/welcome"><span class="icon-home">Kokpit</span></a></li>
+                        @endif
                         <li>
                             <a href="{{ route('logout') }}"
                             	onclick="event.preventDefault();

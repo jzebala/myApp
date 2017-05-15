@@ -3,13 +3,13 @@ myApp jest to prosta aplikacja typu CMS, przeznaczona do zarządzania stroną ty
 
 ## Funkcjonalności
 * System Logowania / Rejestracji
-* ACL - Użytkownicy podzieleni na role (Administrator i Moderator)
+* ACL - Użytkownicy podzieleni na role (Administrator, Moderator, Uzytkownik)
 * Zarządzanie użytkownikami ( Dodaj, usuń, zmień, itp. )
 * Logi użytkowników
 * Generowanie logów w raportach PDF
 * Dodawanie wpisów na strone
-* "Miękkie" usuwanie wpisów
 * Tworzenie kategorii dla wpisów
+* Komentowanie wpisów
 * Planowanie swoich wydarzeń
 * Edycja strony Głównej
 
@@ -45,7 +45,7 @@ myApp jest to prosta aplikacja typu CMS, przeznaczona do zarządzania stroną ty
 | 1  | admin@myapp.com | Administrator | mypassword12 | 
 | 2  | moderator@myapp.com | Moderator | mypassword12 | 
 
-Użytkownika można utworzyć "ręcznie" __localhost:8000/register__ (Utworzony w ten sposób użytkownik będzie miał prawa __moderatora__)
+Użytkownika można utworzyć "ręcznie" __localhost:8000/register__ (Utworzony w ten sposób użytkownik będzie miał prawa __uzytkownik__, możliwość tylko komentowania wpisów)
 
 ## Autor
 Janusz Zębala

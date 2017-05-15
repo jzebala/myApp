@@ -21,5 +21,9 @@ class RolesTableSeeder extends Seeder
         $role = new \App\Roles();
         $role->name = 'Moderator';
         $role->save();
+
+        $role = new \App\Roles();
+        $role->name = 'Uzytkownik';
+        $role->save();
     }
 }

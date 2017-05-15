@@ -26,11 +26,34 @@ nav{
     font-family: 'PT Sans', sans-serif;
 }
 
+#user_avatar{
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  -webkit-border-radius: 150px; border-radius: 150px;
+  -webkit-box-shadow: 0 0 6px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 0 6px 1px rgba(0,0,0,0.5);
+  /* Hide the text. */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .post-contents{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     text-align: justify;
     line-height: 26px;
+}
+
+/* Usunięte elementy */
+.trashed{
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+.trashed:hover{
+  filter: blur(0);
 }
 
 .footer {

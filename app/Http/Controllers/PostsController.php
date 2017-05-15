@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Category;
+
 use Session;
 use Auth;
 use Image;
@@ -99,6 +100,7 @@ class PostsController extends Controller
         }else{
             $post = Post::where('user_id', Auth::user()->id)->findOrFail($id);
         }
+
         return view('posts.show', compact('post'));
     }
 

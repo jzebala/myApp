@@ -69,7 +69,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'avatar' => 'default.png', // Avatar default
         ]);
-        $user->roles()->attach(2);
+        $user->roles()->attach(3);
         return $user;
     }
 }
