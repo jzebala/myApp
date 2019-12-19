@@ -21,6 +21,7 @@ myApp jest to prosta aplikacja typu CMS, przeznaczona do zarządzania stroną ty
 4. Wykonaj w folderze z aplikacją polecenie:
     ```
     composer install
+    composer upgrade
     ```
 5. Wykonaj w folderze z aplikacją polecenie:
     ```
