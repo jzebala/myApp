@@ -20,7 +20,7 @@
 
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3"> 
-            {!! Form::open(['method' => 'POST', 'action' => 'BlogController@search']) !!}
+            {!! Form::open(['method' => 'GET', 'action' => 'BlogController@index']) !!}
             <div class="input-group stylish-input-group">
                 {!! Form::text('search', null, ['class'=>'form-control input-lg', 'autocomplete' => 'off', 'placeholder' => 'Wyszukaj']) !!}
                 <span class="input-group-addon">

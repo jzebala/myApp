@@ -23,8 +23,16 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $search = isset($_GET['search']) ? \Request::get('search') : null;
         $config = BlogConfig::firstOrFail(); // get first config record.
-        $posts = Post::latest()->orderBY('created_at', 'DESC')->paginate($config->pagination);
+
+        if ( !isset($search) ) {
+            // show all posts
+            $posts = Post::latest()->orderBY('created_at', 'DESC')->paginate($config->pagination);
+        } else {
+            $posts = Post::latest()->where('title', 'like', '%' . $search . '%')->paginate($config->pagination);
+        }
+        // Return view
         return view('templates.myappblog.index', compact('posts', 'config'));
     }
 
@@ -43,18 +51,6 @@ class BlogController extends Controller
         }else{
             return redirect('/');
         }
-    }
-
-    /**
-     * Search posts.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function search(Request $request){
-        $config = BlogConfig::firstOrFail(); // get first config record.
-        $posts = Post::latest()->where('title', 'like', '%' . $request->search . '%')->get();
-        return view('templates.myappblog.search', compact('config', 'posts'));
     }
 
     public function profile(){
